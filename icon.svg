@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="116" fill="#12161b"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#2a3441" stroke-width="40"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#3fa075" stroke-width="40" stroke-linecap="round" stroke-dasharray="630 943" transform="rotate(-90 256 256)"/>
+  <text x="256" y="256" dy="0.35em" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="190" font-weight="700" fill="#e8edf2" text-anchor="middle">₽</text>
+</svg>
