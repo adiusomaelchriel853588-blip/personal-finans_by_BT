@@ -537,9 +537,7 @@ function todaysNetBalanceChange(){
   let net = 0;
   state.transactions.forEach(t=>{
     if(!isToday(t.date)) return;
-    if(t.type==='income') net += t.amount;
-    else if(t.type==='expense' || t.type==='save_deposit') net -= t.amount;
-    else if(t.type==='save_withdraw') net += t.amount;
+    if(t.type==='expense') net -= t.amount;
   });
   return net;
 }
