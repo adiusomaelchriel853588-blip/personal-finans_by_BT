@@ -500,8 +500,8 @@ function getPaydays() {
 function getPeriodEnd(d){
   const day = d.getDate(), y = d.getFullYear(), m = d.getMonth();
   const [p1, p2] = getPaydays();
-  if(day <= p1) return new Date(y, m, p1);
-  if(day <= p2) return new Date(y, m, p2);
+  if(day < p1) return new Date(y, m, p1);
+  if(day < p2) return new Date(y, m, p2);
   return new Date(y, m+1, p1);
 }
 
@@ -509,10 +509,9 @@ function getPeriodStart(d){
   const day = d.getDate(), y = d.getFullYear(), m = d.getMonth();
   const [p1, p2] = getPaydays();
   let start;
-  if(day <= p1) start = new Date(y, m-1, p2);
-  else if(day <= p2) start = new Date(y, m, p1);
+  if(day < p1) start = new Date(y, m-1, p2);
+  else if(day < p2) start = new Date(y, m, p1);
   else start = new Date(y, m, p2);
-  start.setDate(start.getDate()+1);
   start.setHours(0,0,0,0);
   return start;
 }
